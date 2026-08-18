@@ -1,0 +1,375 @@
+{
+  "brand": {
+    "name": "Velora",
+    "subline": "Intelligent Automation & Web Systems",
+    "tagline": "Websites & Prozesse, die automatisch Kunden gewinnen.",
+    "logo": {
+      "text": "VELORA",
+      "badge": "AI SYSTEMS",
+      "style": "vector-minimal"
+    }
+  },
+  "theme": {
+    "mode": "dark",
+    "colors": {
+      "primary": "#0B0F19",
+      "secondary": "#1A2234",
+      "accent": "#FF5500",
+      "accentHover": "#E04B00",
+      "textPrimary": "#F8FAFC",
+      "textSecondary": "#94A3B8"
+    },
+    "typography": {
+      "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+      "headingWeight": "700"
+    },
+    "layout": {
+      "borderRadius": "medium",
+      "containerWidth": "1200px"
+    }
+  },
+  "navigation": [
+    { "label": "Lösungen",          "href": "#slot-features" },
+    { "label": "Vorher/Nachher",    "href": "#slot-showcase" },
+    { "label": "Showcase",          "href": "#slot-templates" },
+    { "label": "Pakete & Wartung",  "href": "#slot-pricing" },
+    { "label": "Kostenloser Website-Check", "href": "#slot-funnel", "isCTA": true },
+    { "label": "Kunden-Login",      "href": "portal.html", "isPortalLink": true }
+  ],
+  "hero": {
+    "badge": "⚡ Next-Gen Automatisierung & Web-Architektur",
+    "headline": "Verwandle deine Website in ein 24/7 Akquise-System",
+    "subheadline": "Wir modernisieren veraltete Unternehmens-Websites und automatisieren deine Kundenanfragen – ohne Ausfallzeiten, mit garantierter Conversion-Steigerung.",
+    "ctaPrimary": { "text": "Kostenloser Website-Check", "action": "open-check" }
+  },
+  "metrics": [
+    { "value": "+340%", "label": "Mehr qualifizierte Leads" },
+    { "value": "< 1.2s", "label": "Ladezeit (Google PageSpeed 99+)" },
+    { "value": "100%",   "label": "DSGVO- & Rechtssicherheit" },
+    { "value": "24/7",   "label": "Automatisierte Vorqualifizierung" }
+  ],
+  "features": [
+    {
+      "icon": "cpu",
+      "title": "KI-gestützte Lead-Filterung",
+      "description": "Erfasse und qualifiziere Anfragen in Echtzeit, bevor sie deinen Kalender erreichen."
+    },
+    {
+      "icon": "zap",
+      "title": "High-Speed Neuromarketing UI",
+      "description": "Moderne Designs mit optimierter Nutzerführung für maximale Abschlussraten."
+    },
+    {
+      "icon": "shield",
+      "title": "Unzerstörbare Schema-Architektur",
+      "description": "Änderungen und Updates flexibel per Portal oder WhatsApp einpflegen – ohne Code-Bruch."
+    }
+  ],
+  "funnel": {
+    "title": "Kostenloser Website-Check",
+    "subtitle": "Wähle deinen Einstieg – wir haben die passende Lösung.",
+    "tab1": {
+      "label": "Bestehende Website",
+      "icon": "🌐",
+      "description": "Du hast bereits eine Website und willst wissen, was sie kostet.",
+      "inputLabel": "Gib deine aktuelle Website-Adresse ein:",
+      "inputPlaceholder": "z. B. www.ihre-praxis.de",
+      "buttonText": "Kostenloser Website-Check starten",
+      "checkPhases": [
+        { "id": "speed",  "label": "Ladezeit & Performance", "icon": "⚡" },
+        { "id": "mobile", "label": "Mobile-Optimierung",     "icon": "📱" },
+        { "id": "seo",    "label": "SEO & Sichtbarkeit",     "icon": "🔍" }
+      ]
+    },
+    "tab2": {
+      "label": "Neugründer",
+      "icon": "🚀",
+      "description": "Du gründest oder brauchst eine komplett neue Website.",
+      "steps": [
+        {
+          "id": "industry",
+          "question": "In welcher Branche bist du tätig?",
+          "options": [
+            { "value": "handwerk",     "label": "🔧 Handwerk & Bau" },
+            { "value": "gastronomie", "label": "🍽️ Gastronomie" },
+            { "value": "beratung",    "label": "💼 Beratung & Coaching" },
+            { "value": "handel",      "label": "🛒 E-Commerce & Handel" },
+            { "value": "gesundheit",  "label": "🏥 Gesundheit & Beauty" },
+            { "value": "sonstige",    "label": "✨ Sonstige" }
+          ]
+        },
+        {
+          "id": "style",
+          "question": "Welchen Design-Stil bevorzugst du?",
+          "options": [
+            { "value": "modern",       "label": "🖤 Modern & Minimalistisch" },
+            { "value": "elegant",      "label": "✨ Elegant & Premium" },
+            { "value": "freundlich",   "label": "😊 Freundlich & Warm" },
+            { "value": "kraftvoll",    "label": "💥 Kraftvoll & Dynamisch" }
+          ]
+        },
+        {
+          "id": "goal",
+          "question": "Was ist dein primäres Ziel?",
+          "options": [
+            { "value": "leads",        "label": "📊 Mehr Anfragen & Kunden" },
+            { "value": "verkauf",      "label": "🛍️ Online-Produkte verkaufen" },
+            { "value": "sichtbarkeit", "label": "👁️ Lokale Sichtbarkeit aufbauen" },
+            { "value": "vertrauen",    "label": "🤝 Professionalität zeigen" }
+          ]
+        }
+      ]
+    }
+  },
+  "pricing": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "subtitle": "Für Einsteiger & Neugründer",
+      "price": "490",
+      "priceSuffix": "einmalig",
+      "setupFee": "Kein monatlicher Beitrag",
+      "highlighted": false,
+      "features": [
+        "1-seitige Premium-Website",
+        "Mobile-optimiert & schnell",
+        "Kostenloser Website-Check inklusive",
+        "DSGVO-konform & rechtssicher",
+        "WhatsApp-Steuerung für Texte",
+        "Kunden-Login & Dashboard",
+        "1x Änderung pro Monat"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "subtitle": "Für wachsende Unternehmen",
+      "price": "49",
+      "priceSuffix": "/Monat",
+      "setupFee": "Einmalig 890 €",
+      "highlighted": true,
+      "badge": "Beliebteste Wahl",
+      "features": [
+        "Bis zu 5 Unterseiten",
+        "KI-Chatbot & Lead-Filterung",
+        "Kostenloser Website-Check inklusive",
+        "SEO-Optimierung & Google-Präsenz",
+        "Social-Media Starter-Paket (2 Posts/Woche)",
+        "WhatsApp-Steuerung für alles",
+        "Kunden-Login & Dashboard",
+        "Unbegrenzte Texte & Bildänderungen",
+        "Monatlicher Performance-Report"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "subtitle": "Full-Service & KI-Automatisierung",
+      "price": "149",
+      "priceSuffix": "/Monat",
+      "setupFee": "Einmalig 1.490 €",
+      "highlighted": false,
+      "features": [
+        "Unbegrenzte Seiten & Funktionen",
+        "Vollautomatisches KI-Akquise-System",
+        "Kostenloser Website-Check inklusive",
+        "Social-Marketing (täglich, Multi-Plattform)",
+        "WhatsApp-Steuerung für alles",
+        "Kunden-Login & priorisierter Support",
+        "Dedizierter Ansprechpartner",
+        "Conversion-Garantie schriftlich",
+        "Monatlicher ROI-Report"
+      ]
+    }
+  ],
+  "showcase": [
+    {
+      "id": "bäckerei-mueller",
+      "label": "Bäckerei Müller",
+      "industry": "Gastronomie",
+      "beforeLabel": "Vorher",
+      "afterLabel": "Nachher",
+      "beforeStats": { "speed": 38, "leads": "2–3/Monat",  "mobile": "Nicht optimiert" },
+      "afterStats":  { "speed": 99, "leads": "18–25/Monat", "mobile": "100% responsiv" },
+      "quote": "Seit dem Relaunch klingelt das Telefon von alleine.",
+      "quoteAuthor": "Thomas M., Inhaber",
+      "rating": 5
+    },
+    {
+      "id": "kanzlei-berger",
+      "label": "Kanzlei Berger",
+      "industry": "Beratung & Recht",
+      "beforeLabel": "Vorher",
+      "afterLabel": "Nachher",
+      "beforeStats": { "speed": 51, "leads": "5–8/Monat",  "mobile": "Teilweise" },
+      "afterStats":  { "speed": 98, "leads": "40–60/Monat", "mobile": "100% responsiv" },
+      "quote": "Wir haben unsere Online-Anfragen vervierfacht – ohne einen einzigen Werbeeuro mehr.",
+      "quoteAuthor": "Dr. S. Berger, Rechtsanwältin",
+      "rating": 5
+    },
+    {
+      "id": "elektro-meister",
+      "label": "Elektro Meisterbetrieb",
+      "industry": "Handwerk & Bau",
+      "beforeLabel": "Vorher",
+      "afterLabel": "Nachher",
+      "beforeStats": { "speed": 32, "leads": "1–2/Monat",  "mobile": "5.2s Ladezeit · Kein Mobil-Design" },
+      "afterStats":  { "speed": 99, "leads": "22–30/Monat", "mobile": "0.3s · 1-Klick Notdienst (+180% Neukunden)" },
+      "quote": "Unser Notdienst-Telefon steht nicht mehr still. Wir haben 180% mehr Neukunden gewonnen.",
+      "quoteAuthor": "Markus E., Elektromeister",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "Wie läuft der Kostenloser Website-Check ab?",
+      "answer": "Du gibst einfach deine Domain ein – unser System analysiert automatisch Ladezeit, Mobile-Optimierung und SEO-Score. Das Ergebnis siehst du sofort, kostenlos und ohne Angabe von Kontaktdaten."
+    },
+    {
+      "question": "Wie kann ich meine Website per WhatsApp steuern?",
+      "answer": "Nach dem Launch erhältst du einen gesicherten WhatsApp-Kanal direkt zu unserem System. Du schickst einfach eine Nachricht mit dem Änderungswunsch – wir setzen es um, meist innerhalb von 24 Stunden."
+    },
+    {
+      "question": "Was ist der Kunden-Login / das Dashboard?",
+      "answer": "Im Kunden-Dashboard siehst du jederzeit deinen Anfragen-Eingang, Performance-Daten, Änderungstickets und Rechnungen. Zugang bekommst du per E-Mail nach Projektstart."
+    },
+    {
+      "question": "Gibt es versteckte Kosten?",
+      "answer": "Nein. Die Preise auf dieser Seite sind transparent und fix. Einmalige Setup-Gebühr + monatliche Wartungspauschale – fertig. Keine Überraschungen."
+    },
+    {
+      "question": "Ich gründe gerade – habt ihr Lösungen für Neugründer?",
+      "answer": "Ja! Nutze den 'Neugründer'-Tab im Website-Check. In 3 kurzen Schritten konfigurier wir dein ideales Paket – inklusive Empfehlung und Preis. Kein Call nötig."
+    },
+    {
+      "question": "Wie lange dauert die Umsetzung?",
+      "answer": "Dank unserer automatisierten System-Architektur ist Express-Bereitstellung in 24–48 Stunden möglich. Basic-Websites gehen standardmäßig in 3–5 Werktagen live. Pro- und Enterprise-Projekte in 7–14 Tagen. Kein manueller Bottleneck – du siehst Fortschritte in Echtzeit im Kunden-Dashboard."
+    }
+  ],
+  "leadFunnel": {
+    "title": "Kostenloser Website-Check",
+    "subtitle": "Trage deine Domain ein und erhalte sofort eine datengestützte Analyse.",
+    "inputPlaceholder": "z. B. www.ihre-praxis.de",
+    "buttonText": "Kostenloser Website-Check starten"
+  },
+  "templates": [
+    {
+      "id": "sanitaer-notdienst",
+      "category": "handwerk",
+      "categoryLabel": "Handwerk & Industrie",
+      "title": "Sanitär / Notdienst System",
+      "badge": "+240% mehr Anfragen",
+      "highlights": [
+        "Direkter Notdienst- & Express-Booking-Button",
+        "1-Klick WhatsApp-Auftragsannahme",
+        "Sofortiger Schadensfoto-Upload für Kunden"
+      ],
+      "kpi": { "label": "Google PageSpeed", "value": "99/100", "sub": "+240% Express-Anfragen" },
+      "recommendedPkg": "pro"
+    },
+    {
+      "id": "solar-elektro",
+      "category": "handwerk",
+      "categoryLabel": "Handwerk & Industrie",
+      "title": "Solar & Elektro Meister-System",
+      "badge": "+310% PV-Anfragen",
+      "highlights": [
+        "Interaktiver PV-Dach-Konfigurator & Lead-Magnet",
+        "Automatisierte Ertragsprognose & Angebotserstellung",
+        "Qualifizierte Vorfilterung von Kundenanfragen"
+      ],
+      "kpi": { "label": "Google PageSpeed", "value": "98/100", "sub": "+310% qualifizierte PV-Leads" },
+      "recommendedPkg": "enterprise"
+    },
+    {
+      "id": "fine-dining",
+      "category": "gastronomie",
+      "categoryLabel": "Gastronomie & Events",
+      "title": "Fine Dining & Hospitality",
+      "badge": "+220% Reservierungen",
+      "highlights": [
+        "24/7 Tischreservierung ohne Drittanbieter-Provision",
+        "Interaktiver digitaler Menü- & Weinkarten-Viewer",
+        "Google-Maps & Lokaler SEO-Push"
+      ],
+      "kpi": { "label": "Ladezeit", "value": "0.4s", "sub": "+220% Direkt-Reservierungen" },
+      "recommendedPkg": "pro"
+    },
+    {
+      "id": "cafe-catering",
+      "category": "gastronomie",
+      "categoryLabel": "Gastronomie & Events",
+      "title": "Café & Catering System",
+      "badge": "+180% Event-Catering",
+      "highlights": [
+        "1-Click Vorbestellung & Abholungs-System",
+        "Live-Event-Planer & digitaler Catering-Kalkulator",
+        "Automatisierte WhatsApp-Bestellbestätigung"
+      ],
+      "kpi": { "label": "Performance", "value": "100/100", "sub": "+180% Catering-Umsatz" },
+      "recommendedPkg": "pro"
+    },
+    {
+      "id": "kanzlei-notariat",
+      "category": "beratung",
+      "categoryLabel": "Beratung, Kanzlei & Coaching",
+      "title": "Kanzlei & Notariat System",
+      "badge": "+340% qualifizierte Leads",
+      "highlights": [
+        "Neuromarketing Dark-Design mit Status-Autorität",
+        "Automatisierte Mandanten-Erstprüfung & Vorfilter",
+        "DSGVO-konforme Direkt-Kalenderintegration"
+      ],
+      "kpi": { "label": "Lead-Qualität", "value": "+340%", "sub": "100% DSGVO- & berufsrechtskonform" },
+      "recommendedPkg": "enterprise"
+    },
+    {
+      "id": "coaching-b2b",
+      "category": "beratung",
+      "categoryLabel": "Beratung, Kanzlei & Coaching",
+      "title": "Coaching & B2B Consulting Funnel",
+      "badge": "+290% Beratungsanfragen",
+      "highlights": [
+        "High-Ticket Qualifizierungs- & Bewerbungs-Funnel",
+        "Interaktive Video-Case-Studies & Social Proof",
+        "Automatisierter WhatsApp-Termin-Reminder"
+      ],
+      "kpi": { "label": "Conversion-Rate", "value": "99/100", "sub": "+290% qualifizierte Termine" },
+      "recommendedPkg": "pro"
+    },
+    {
+      "id": "d2c-brand",
+      "category": "ecommerce",
+      "categoryLabel": "E-Commerce & Marken",
+      "title": "D2C High-Performance Brand",
+      "badge": "-45% Warenkorb-Abbrüche",
+      "highlights": [
+        "Sub-0.5s Ladezeit mit globalem Edge-Caching",
+        "1-Click Express Checkout (Apple/Google Pay)",
+        "24/7 KI-Verkaufsberaterin 'Nova' integriert"
+      ],
+      "kpi": { "label": "Checkout-Speed", "value": "0.3s", "sub": "Mobile Speed Score 100/100" },
+      "recommendedPkg": "enterprise"
+    },
+    {
+      "id": "b2b-shop",
+      "category": "ecommerce",
+      "categoryLabel": "E-Commerce & Marken",
+      "title": "B2B Shop & Händler-Portal",
+      "badge": "+190% Händler-Accounts",
+      "highlights": [
+        "Geschützter Händler-Login mit individuellen Netto-Preisen",
+        "Dynamische Mengenstaffeln & 1-Klick PDF-Sofortangebot",
+        "Automatische ERP- & WhatsApp-Synchronisation"
+      ],
+      "kpi": { "label": "Händler-Growth", "value": "99/100", "sub": "+190% Neukunden-Registrierungen" },
+      "recommendedPkg": "enterprise"
+    }
+  ],
+  "legal": {
+    "company": "Velora Systems",
+    "impressumUrl": "impressum.html",
+    "privacyUrl": "datenschutz.html",
+    "copyright": "© 2026 Velora. Alle Rechte vorbehalten."
+  }
+}
