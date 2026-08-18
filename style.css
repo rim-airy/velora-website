@@ -3137,3 +3137,5 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+#chatbot-toggle { position: fixed !important; bottom: 24px !important; right: 24px !important; z-index: 10000 !important; } .floating-cta, #floating-cta, a.floating-cta { position: fixed !important; bottom: 24px !important; right: 230px !important; z-index: 9999 !important; }
