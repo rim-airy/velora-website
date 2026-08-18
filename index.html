@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Velora – Kostenloser Website-Check & KI-Webdesign-Agentur</title>
-  <meta name="description" content="Velora modernisiert Websites und automatisiert Kundenanfragen – mit KI-gestützter Lead-Filterung. Kostenloser Website-Check für Speed, Mobile & SEO.">
+  <meta name="description"
+    content="Velora modernisiert Websites und automatisiert Kundenanfragen – mit KI-gestützter Lead-Filterung. Kostenloser Website-Check für Speed, Mobile & SEO.">
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+    media="print" onload="this.media='all'">
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </noscript>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- SLOT 1: Navbar -->
@@ -50,20 +55,23 @@
   <footer id="slot-footer" role="contentinfo"></footer>
 
   <!-- High-Converting Express-Anfragemodal -->
-  <div id="inquiry-modal" class="inquiry-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+  <div id="inquiry-modal" class="inquiry-modal-overlay hidden" role="dialog" aria-modal="true"
+    aria-labelledby="modal-headline">
     <div class="inquiry-modal-dialog">
       <button id="modal-close-btn" class="modal-close-btn" aria-label="Modal schließen" type="button">✕</button>
-      
+
       <div class="modal-header">
         <span id="modal-pkg-badge" class="modal-pkg-badge">Ausgewählt: Pro Paket</span>
         <h3 id="modal-headline" class="modal-title">Kostenloses Strategiekonzept anfordern</h3>
-        <p class="modal-subtitle">Wir analysieren deine Anforderungen und erstellen einen 100% maßgeschneiderten Umsetzungsplan.</p>
+        <p class="modal-subtitle">Wir analysieren deine Anforderungen und erstellen einen 100% maßgeschneiderten
+          Umsetzungsplan.</p>
       </div>
 
       <form id="inquiry-form" class="modal-form" novalidate>
         <div class="modal-field">
           <label for="modal-name" class="modal-label">Dein Name oder Unternehmensname</label>
-          <input type="text" id="modal-name" name="name" class="modal-input" placeholder="z. B. Dr. Markus Weber" required autocomplete="name">
+          <input type="text" id="modal-name" name="name" class="modal-input" placeholder="z. B. Dr. Markus Weber"
+            required autocomplete="name">
         </div>
 
         <div class="modal-field">
@@ -73,13 +81,15 @@
           </label>
           <div class="modal-input-icon-wrap">
             <span class="modal-input-icon">📱</span>
-            <input type="tel" id="modal-phone" name="phone" class="modal-input with-icon" placeholder="z. B. +49 171 2345678" required autocomplete="tel">
+            <input type="tel" id="modal-phone" name="phone" class="modal-input with-icon"
+              placeholder="z. B. +49 171 2345678" required autocomplete="tel">
           </div>
         </div>
 
         <div class="modal-field">
           <label for="modal-email" class="modal-label">E-Mail-Adresse</label>
-          <input type="email" id="modal-email" name="email" class="modal-input" placeholder="z. B. weber@unternehmen.de" required autocomplete="email">
+          <input type="email" id="modal-email" name="email" class="modal-input" placeholder="z. B. weber@unternehmen.de"
+            required autocomplete="email">
         </div>
 
         <button type="submit" id="modal-submit-btn" class="btn-primary modal-submit-btn">
@@ -98,8 +108,10 @@
       <div id="modal-success-state" class="modal-success hidden" aria-live="polite">
         <div class="modal-success-icon">✅</div>
         <h4>Anfrage erfolgreich eingegangen!</h4>
-        <p id="modal-success-msg">Vielen Dank! Wir erstellen dein maßgeschneidertes Strategiekonzept und melden uns in weniger als 15 Minuten bei dir.</p>
-        <a id="modal-wa-direct-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary modal-wa-btn">
+        <p id="modal-success-msg">Vielen Dank! Wir erstellen dein maßgeschneidertes Strategiekonzept und melden uns in
+          weniger als 15 Minuten bei dir.</p>
+        <a id="modal-wa-direct-btn" href="#" target="_blank" rel="noopener noreferrer"
+          class="btn-secondary modal-wa-btn">
           <span>💬 Direkt auf WhatsApp chatten</span>
         </a>
       </div>
@@ -112,16 +124,15 @@
     <button id="accept-cookies" class="btn-outline">Verstanden</button>
   </div>
 
-  <!-- Floating CTA -->
-  <a id="floating-cta" href="#check" class="floating-cta" aria-label="Kostenloser Website-Check starten">
-    <span class="floating-cta-pulse"></span>
-    Gratis Website-Check
-  </a>
+
 
   <!-- 24/7 Nova KI-Beraterin Chatbot Widget -->
   <div id="chatbot-widget" class="chatbot-widget" aria-label="Nova KI-Beraterin">
     <button id="chatbot-toggle" class="chatbot-toggle-btn" aria-expanded="false" aria-controls="chatbot-window">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
       <span class="chatbot-badge">Nova KI-Beraterin</span>
     </button>
     <div id="chatbot-window" class="chatbot-window hidden" role="dialog" aria-label="Nova KI-Beraterin Chat">
@@ -136,13 +147,16 @@
           <span class="chatbot-status">● Online – 24/7 KI-Beraterin</span>
         </div>
         <div style="display:flex;align-items:center;gap:0.5rem;">
-          <button id="chatbot-mute" class="chatbot-mute-btn" type="button" aria-label="Ton aus" title="Ton ein/aus">🔊</button>
-          <button id="chatbot-close" class="chatbot-close-btn" type="button" aria-label="Chat schließen" title="Chat schließen">✕</button>
+          <button id="chatbot-mute" class="chatbot-mute-btn" type="button" aria-label="Ton aus"
+            title="Ton ein/aus">🔊</button>
+          <button id="chatbot-close" class="chatbot-close-btn" type="button" aria-label="Chat schließen"
+            title="Chat schließen">✕</button>
         </div>
       </div>
       <div class="chatbot-body" id="chatbot-messages">
         <div class="chat-msg bot">
-          <p>Hallo! Ich bin <strong>Nova</strong>, deine KI-Beraterin von Velora. Ich helfe dir bei Fragen zu Preisen, Website-Check, WhatsApp-Steuerung und mehr. Wie kann ich dir helfen?</p>
+          <p>Hallo! Ich bin <strong>Nova</strong>, deine KI-Beraterin von Velora. Ich helfe dir bei Fragen zu Preisen,
+            Website-Check, WhatsApp-Steuerung und mehr. Wie kann ich dir helfen?</p>
         </div>
         <div class="chatbot-quick-btns">
           <button class="quick-btn" data-query="Preise">💶 Preise</button>
@@ -155,7 +169,11 @@
         <label for="chatbot-input" class="visually-hidden">Deine Nachricht</label>
         <input type="text" id="chatbot-input" placeholder="Frage eingeben..." autocomplete="off" maxlength="300">
         <button id="chatbot-send" aria-label="Senden">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
           Senden
         </button>
       </div>
@@ -164,4 +182,5 @@
 
   <script src="script.js" defer></script>
 </body>
+
 </html>
