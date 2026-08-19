@@ -3341,12 +3341,3 @@ footer {
   right: 24px !important;
   z-index: 10000 !important;
 }
-
-.floating-cta,
-#floating-cta,
-a.floating-cta {
-  position: fixed !important;
-  bottom: 24px !important;
-  right: 230px !important;
-  z-index: 9999 !important;
-}
