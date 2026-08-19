@@ -2629,20 +2629,7 @@ footer {
     height: 60px;
   }
 
-  /* Floating CTA (links-unten) */
-  .floating-cta {
-    bottom: 20px !important;
-    left: 20px !important;
-    right: auto !important;
-    font-size: 0.78rem;
-    padding: 0.6rem 1rem;
-    border-radius: 999px;
-    max-width: calc(50vw - 30px);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    z-index: 990 !important;
-  }
+
 
   /* Nova FAB (rechts-unten, 20px Abstand, z-index 999) */
   .chatbot-widget {
