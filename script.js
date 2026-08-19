@@ -61,18 +61,18 @@ function applyDesignTokens(theme) {
   const root = document.documentElement;
   const { colors, typography, layout } = theme;
 
-  root.style.setProperty('--color-primary',        colors.primary);
-  root.style.setProperty('--color-secondary',      colors.secondary);
-  root.style.setProperty('--color-accent',         colors.accent);
-  root.style.setProperty('--color-accent-hover',   colors.accentHover);
-  root.style.setProperty('--color-text-primary',   colors.textPrimary);
+  root.style.setProperty('--color-primary', colors.primary);
+  root.style.setProperty('--color-secondary', colors.secondary);
+  root.style.setProperty('--color-accent', colors.accent);
+  root.style.setProperty('--color-accent-hover', colors.accentHover);
+  root.style.setProperty('--color-text-primary', colors.textPrimary);
   root.style.setProperty('--color-text-secondary', colors.textSecondary);
-  root.style.setProperty('--font-family',          typography.fontFamily);
-  root.style.setProperty('--heading-weight',       typography.headingWeight);
-  root.style.setProperty('--container-width',      layout.containerWidth);
+  root.style.setProperty('--font-family', typography.fontFamily);
+  root.style.setProperty('--heading-weight', typography.headingWeight);
+  root.style.setProperty('--container-width', layout.containerWidth);
 
   const radiusMap = { small: '6px', medium: '10px', large: '16px', pill: '999px' };
-  const r   = radiusMap[layout.borderRadius] || '10px';
+  const r = radiusMap[layout.borderRadius] || '10px';
   const rSm = layout.borderRadius === 'small' ? '4px' : '6px';
   const rLg = layout.borderRadius === 'large' ? '18px' : '14px';
   root.style.setProperty('--radius-sm', rSm);
@@ -93,13 +93,13 @@ function updateMeta(brand) {
 // 3. SVG ICON MAP
 // ============================================================
 const ICONS = {
-  cpu:    `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>`,
-  zap:    `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+  cpu: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>`,
+  zap: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
   shield: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-  check:  `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`,
-  lock:   `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
-  star:   `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
-  chevron:`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>`,
+  check: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>`,
+  lock: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
+  star: `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  chevron: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>`,
 };
 
 function getIcon(name) { return ICONS[name] || ICONS['zap']; }
@@ -184,7 +184,7 @@ function renderNavbar(cfg) {
   // Desktop nav items
   const navItems = navigation.map(item => {
     let classes = 'nav-item';
-    if (item.isCTA)        classes += ' is-cta';
+    if (item.isCTA) classes += ' is-cta';
     if (item.isPortalLink) classes += ' is-portal-link';
     const icon = item.isPortalLink ? `${getIcon('lock')} ` : '';
     return `
@@ -196,7 +196,7 @@ function renderNavbar(cfg) {
   // Mobile nav items (same links, bigger touch targets)
   const mobileNavItems = navigation.map(item => {
     let classes = '';
-    if (item.isCTA)        classes += ' is-cta';
+    if (item.isCTA) classes += ' is-cta';
     if (item.isPortalLink) classes += ' is-portal-link';
     const icon = item.isPortalLink ? `${getIcon('lock')} ` : '';
     return `
@@ -229,7 +229,7 @@ function renderNavbar(cfg) {
   // Mobile nav panel – in body injiziert (außerhalb der Navbar)
   if (!document.getElementById('mobile-nav')) {
     const panel = document.createElement('div');
-    panel.id        = 'mobile-nav';
+    panel.id = 'mobile-nav';
     panel.className = 'mobile-nav-panel';
     panel.setAttribute('role', 'navigation');
     panel.setAttribute('aria-label', 'Mobilnavigation');
@@ -237,7 +237,7 @@ function renderNavbar(cfg) {
     document.body.appendChild(panel);
 
     const overlay = document.createElement('div');
-    overlay.id        = 'mobile-nav-overlay';
+    overlay.id = 'mobile-nav-overlay';
     overlay.className = 'mobile-nav-overlay';
     overlay.setAttribute('aria-hidden', 'true');
     document.body.appendChild(overlay);
@@ -263,8 +263,8 @@ function renderNavbar(cfg) {
 // 5b. HAMBURGER MENU TOGGLE
 // ============================================================
 function initHamburger() {
-  const btn     = document.getElementById('hamburger-btn');
-  const panel   = document.getElementById('mobile-nav');
+  const btn = document.getElementById('hamburger-btn');
+  const panel = document.getElementById('mobile-nav');
   const overlay = document.getElementById('mobile-nav-overlay');
   if (!btn || !panel) return;
 
@@ -323,32 +323,32 @@ const DEFAULT_FOUNDER_STEPS = [
     id: 'industry',
     question: 'In welcher Branche bist du tätig?',
     options: [
-      { value: 'handwerk',     label: '🔧 Handwerk & Bau' },
+      { value: 'handwerk', label: '🔧 Handwerk & Bau' },
       { value: 'gastronomie', label: '🍽️ Gastronomie & Hotel' },
-      { value: 'beratung',    label: '💼 Beratung & Coaching' },
-      { value: 'handel',      label: '🛒 E-Commerce & Handel' },
-      { value: 'gesundheit',  label: '🏥 Gesundheit & Beauty' },
-      { value: 'sonstige',    label: '✨ Sonstige Branche' }
+      { value: 'beratung', label: '💼 Beratung & Coaching' },
+      { value: 'handel', label: '🛒 E-Commerce & Handel' },
+      { value: 'gesundheit', label: '🏥 Gesundheit & Beauty' },
+      { value: 'sonstige', label: '✨ Sonstige Branche' }
     ]
   },
   {
     id: 'style',
     question: 'Welchen Design-Stil bevorzugst du?',
     options: [
-      { value: 'modern',       label: '🖤 Modern & Minimalistisch' },
-      { value: 'elegant',      label: '✨ Elegant & Premium' },
-      { value: 'freundlich',   label: '😊 Freundlich & Nahbar' },
-      { value: 'kraftvoll',    label: '💥 Kraftvoll & Dynamisch' }
+      { value: 'modern', label: '🖤 Modern & Minimalistisch' },
+      { value: 'elegant', label: '✨ Elegant & Premium' },
+      { value: 'freundlich', label: '😊 Freundlich & Nahbar' },
+      { value: 'kraftvoll', label: '💥 Kraftvoll & Dynamisch' }
     ]
   },
   {
     id: 'goal',
     question: 'Was ist dein primäres Ziel?',
     options: [
-      { value: 'leads',        label: '📊 Mehr Anfragen & Neukunden' },
-      { value: 'verkauf',      label: '🛍️ Online-Produkte verkaufen' },
+      { value: 'leads', label: '📊 Mehr Anfragen & Neukunden' },
+      { value: 'verkauf', label: '🛍️ Online-Produkte verkaufen' },
       { value: 'sichtbarkeit', label: '👁️ Lokale Sichtbarkeit aufbauen' },
-      { value: 'vertrauen',    label: '🤝 Professionalität & Vertrauen' }
+      { value: 'vertrauen', label: '🤝 Professionalität & Vertrauen' }
     ]
   }
 ];
@@ -695,7 +695,7 @@ function initHeroTabs() {
 }
 
 function initHeroForm() {
-  const form  = document.getElementById('hero-check-form');
+  const form = document.getElementById('hero-check-form');
   const input = document.getElementById('hero-url-input');
   const error = document.getElementById('hero-url-error');
   if (!form || !input || !error) return;
@@ -703,7 +703,7 @@ function initHeroForm() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const rawVal = input.value.trim();
-    const clean  = sanitize(rawVal);
+    const clean = sanitize(rawVal);
     const testVal = clean.replace(/^https?:\/\//, '').replace(/\/$/, '').split('/')[0];
     const domainPattern = /^[a-zA-Z0-9äöüÄÖÜ\-]{1,63}(\.[a-zA-Z]{2,})+$/;
 
@@ -895,8 +895,8 @@ function renderPricing(cfg) {
   if (!cfg.pricing || !cfg.pricing.length) return;
 
   const cards = cfg.pricing.map((pkg, i) => {
-    const badge     = pkg.badge ? `<div class="pricing-badge">${sanitize(pkg.badge)}</div>` : '';
-    const features  = pkg.features.map(f => `
+    const badge = pkg.badge ? `<div class="pricing-badge">${sanitize(pkg.badge)}</div>` : '';
+    const features = pkg.features.map(f => `
       <li class="pricing-feature-item">
         <span class="pricing-feature-icon">${getIcon('check')}</span>
         <span>${sanitize(f)}</span>
@@ -1056,15 +1056,15 @@ function initFunnelTabs() {
 
 // Form-Validation + Check-Trigger
 function initFunnelForm(t1Config) {
-  const form   = document.getElementById('funnel-form');
-  const input  = document.getElementById('funnel-url-input');
-  const error  = document.getElementById('funnel-url-error');
+  const form = document.getElementById('funnel-form');
+  const input = document.getElementById('funnel-url-input');
+  const error = document.getElementById('funnel-url-error');
   if (!form || !input || !error) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const rawVal = input.value.trim();
-    const clean  = sanitize(rawVal);
+    const clean = sanitize(rawVal);
     const testVal = clean.replace(/^https?:\/\//, '').replace(/\/$/, '').split('/')[0];
     const domainPattern = /^[a-zA-Z0-9äöüÄÖÜ\-]{1,63}(\.[a-zA-Z]{2,})+$/;
 
@@ -1090,9 +1090,9 @@ function initFunnelForm(t1Config) {
 // 12. ANIMIERTER CHECK (Speed → Mobile → SEO)
 // ============================================================
 function triggerCheck(domain) {
-  const btn      = document.getElementById('funnel-submit-btn');
+  const btn = document.getElementById('funnel-submit-btn');
   const progress = document.getElementById('check-progress');
-  const result   = document.getElementById('audit-result');
+  const result = document.getElementById('audit-result');
   if (!progress || !result) return;
 
   // Reset
@@ -1102,9 +1102,9 @@ function triggerCheck(domain) {
 
   const phases = ['speed', 'mobile', 'seo'];
   phases.forEach(id => {
-    const bar    = document.getElementById(`check-bar-${id}`);
+    const bar = document.getElementById(`check-bar-${id}`);
     const status = document.getElementById(`check-status-${id}`);
-    if (bar)    bar.style.width = '0%';
+    if (bar) bar.style.width = '0%';
     if (status) { status.textContent = 'Wartet...'; status.className = 'check-phase-status'; }
   });
 
@@ -1125,17 +1125,17 @@ function triggerCheck(domain) {
 
   // Generiere realistische Scores
   const scores = {
-    speed:  Math.floor(Math.random() * 35) + 42,   // 42–77
+    speed: Math.floor(Math.random() * 35) + 42,   // 42–77
     mobile: Math.floor(Math.random() * 30) + 50,   // 50–80
-    seo:    Math.floor(Math.random() * 28) + 52,   // 52–80
+    seo: Math.floor(Math.random() * 28) + 52,   // 52–80
   };
 
   // Phase 1: Speed (0–1s)
   setTimeout(() => {
-    const bar    = document.getElementById('check-bar-speed');
+    const bar = document.getElementById('check-bar-speed');
     const status = document.getElementById('check-status-speed');
     if (status) status.textContent = 'Wird geprüft...';
-    if (bar)    setTimeout(() => { bar.style.width = `${scores.speed}%`; }, 50);
+    if (bar) setTimeout(() => { bar.style.width = `${scores.speed}%`; }, 50);
   }, 200);
 
   setTimeout(() => {
@@ -1145,10 +1145,10 @@ function triggerCheck(domain) {
 
   // Phase 2: Mobile (1.2s–2.2s)
   setTimeout(() => {
-    const bar    = document.getElementById('check-bar-mobile');
+    const bar = document.getElementById('check-bar-mobile');
     const status = document.getElementById('check-status-mobile');
     if (status) status.textContent = 'Wird geprüft...';
-    if (bar)    setTimeout(() => { bar.style.width = `${scores.mobile}%`; }, 50);
+    if (bar) setTimeout(() => { bar.style.width = `${scores.mobile}%`; }, 50);
   }, 1200);
 
   setTimeout(() => {
@@ -1158,10 +1158,10 @@ function triggerCheck(domain) {
 
   // Phase 3: SEO (2.3s–3.3s)
   setTimeout(() => {
-    const bar    = document.getElementById('check-bar-seo');
+    const bar = document.getElementById('check-bar-seo');
     const status = document.getElementById('check-status-seo');
     if (status) status.textContent = 'Wird geprüft...';
-    if (bar)    setTimeout(() => { bar.style.width = `${scores.seo}%`; }, 50);
+    if (bar) setTimeout(() => { bar.style.width = `${scores.seo}%`; }, 50);
   }, 2300);
 
   setTimeout(() => {
@@ -1177,8 +1177,8 @@ function triggerCheck(domain) {
 
     // Tier-Scores: realistisch erreichbare Werte nach Velora-Modernisierung
     const tierScores = {
-      basic:      { speed: Math.min(88, scores.speed + 35), mobile: Math.min(90, scores.mobile + 32), seo: Math.min(85, scores.seo + 28) },
-      pro:        { speed: Math.min(97, scores.speed + 50), mobile: Math.min(98, scores.mobile + 45), seo: Math.min(95, scores.seo + 40) },
+      basic: { speed: Math.min(88, scores.speed + 35), mobile: Math.min(90, scores.mobile + 32), seo: Math.min(85, scores.seo + 28) },
+      pro: { speed: Math.min(97, scores.speed + 50), mobile: Math.min(98, scores.mobile + 45), seo: Math.min(95, scores.seo + 40) },
       enterprise: { speed: 99, mobile: 99, seo: 98 }
     };
 
@@ -1613,8 +1613,8 @@ function renderFaq(cfg) {
   // Accordion-Logik
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
-      const item     = btn.closest('.faq-item');
-      const isOpen   = item.classList.contains('open');
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
 
       // Alle schließen
       document.querySelectorAll('.faq-item').forEach(el => {
@@ -1681,7 +1681,7 @@ function initScrollAnimations() {
 // ============================================================
 function initCookieBanner() {
   const banner = document.getElementById('cookie-banner');
-  const btn    = document.getElementById('accept-cookies');
+  const btn = document.getElementById('accept-cookies');
   if (!banner || !btn) return;
 
   if (localStorage.getItem('velora_cookies_ok')) {
@@ -1758,11 +1758,11 @@ function novaReply(userText) {
 }
 
 function initChatbot(brand) {
-  const toggle   = document.getElementById('chatbot-toggle');
-  const window_  = document.getElementById('chatbot-window');
-  const close    = document.getElementById('chatbot-close');
-  const inputEl  = document.getElementById('chatbot-input');
-  const sendBtn  = document.getElementById('chatbot-send');
+  const toggle = document.getElementById('chatbot-toggle');
+  const window_ = document.getElementById('chatbot-window');
+  const close = document.getElementById('chatbot-close');
+  const inputEl = document.getElementById('chatbot-input');
+  const sendBtn = document.getElementById('chatbot-send');
   const messages = document.getElementById('chatbot-messages');
   if (!toggle || !window_) return;
 
@@ -1817,7 +1817,7 @@ function initChatbot(brand) {
     mobileBackdrop.setAttribute('aria-hidden', 'true');
     mobileBackdrop.style.cssText = [
       'position:fixed', 'inset:0', 'z-index:9998',
-      'background:rgba(11,15,25,0.75)',
+      'background:rgba(11,15,25,0.20)',
       'backdrop-filter:none',
       '-webkit-backdrop-filter:none',
       'opacity:0', 'pointer-events:none',
@@ -1857,14 +1857,14 @@ function initChatbot(brand) {
     toggle.setAttribute('aria-expanded', 'true');
 
     lockBodyScroll();
-    showMobileBackdrop();
+    //showMobileBackdrop();
 
     // Android-Zurück-Taste & Browser History-Integration
     if (!novaHistoryActive) {
       try {
         history.pushState({ modal: 'nova' }, '');
         novaHistoryActive = true;
-      } catch (e) {}
+      } catch (e) { }
     }
 
     if (isMobile()) {
@@ -1874,7 +1874,7 @@ function initChatbot(brand) {
 
   function closeNova(fromUserAction = false) {
     if (!isNovaOpen()) return;
-    try { window.speechSynthesis?.cancel(); } catch (err) {}
+    try { window.speechSynthesis?.cancel(); } catch (err) { }
 
     window_.style.transform = '';
     window_.classList.add('hidden');
@@ -1888,7 +1888,7 @@ function initChatbot(brand) {
       novaHistoryActive = false;
       try {
         history.back();
-      } catch (e) {}
+      } catch (e) { }
     } else {
       novaHistoryActive = false;
     }
@@ -1915,14 +1915,19 @@ function initChatbot(brand) {
   });
 
   // Klick außerhalb schließt den Chat
+  // Klick außerhalb schließt den Chat
   document.addEventListener('click', (e) => {
     if (!isNovaOpen()) return;
+    if (isMobile()) return;
     const isClickInside = window_.contains(e.target) || toggle.contains(e.target);
     if (!isClickInside) {
       closeNova(true);
     }
   });
-
+  // Chat-Container isolieren: Klicks im Chat schlagen nicht nach außen durch
+  window_?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
   // ESC schließt Chat
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isNovaOpen()) {
@@ -1935,7 +1940,7 @@ function initChatbot(brand) {
   // ============================================================
   const dragHandleArea = document.getElementById('chatbot-drag-handle-area');
   const chatHeader = document.getElementById('chatbot-header');
-  const swipeTargets = [dragHandleArea, chatHeader].filter(Boolean);
+  const swipeTargets = [dragHandleArea].filter(Boolean);
 
   let touchStartY = 0;
   let touchCurrentY = 0;
@@ -1987,7 +1992,7 @@ function initChatbot(brand) {
       e.stopPropagation();
       try {
         window.speechSynthesis?.cancel();
-      } catch (err) {}
+      } catch (err) { }
       novaSpeechEnabled = false;
       muteBtn.classList.toggle('muted');
       const isMuted = muteBtn.classList.contains('muted');
@@ -2003,9 +2008,9 @@ function initChatbot(brand) {
     const preview = text.replace(/[*\n]/g, ' ').trim().slice(0, 200);
     if (!preview) return;
     const utt = new SpeechSynthesisUtterance(preview);
-    utt.lang   = 'de-DE';
-    utt.rate   = 0.95;
-    utt.pitch  = 1.05;
+    utt.lang = 'de-DE';
+    utt.rate = 0.95;
+    utt.pitch = 1.05;
     window.speechSynthesis.cancel(); // Vorherige Ausgabe stoppen
     window.speechSynthesis.speak(utt);
   }
@@ -2048,7 +2053,7 @@ function initChatbot(brand) {
     btnRow.className = 'chatbot-btn-row';
 
     const micBtn = document.createElement('button');
-    micBtn.id   = 'chatbot-mic';
+    micBtn.id = 'chatbot-mic';
     micBtn.type = 'button';
     micBtn.className = 'chatbot-mic-btn';
     micBtn.setAttribute('aria-label', 'Spracheingabe starten');
@@ -2066,7 +2071,7 @@ function initChatbot(brand) {
   // VOICE SUPPORT: Mikrofon-Button + Web Speech API (Lazy Lifecycle)
   // ============================================================
   const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const micBtnEl  = document.getElementById('chatbot-mic');
+  const micBtnEl = document.getElementById('chatbot-mic');
 
   if (SpeechRec && micBtnEl) {
     let activeRecognition = null;
@@ -2075,7 +2080,7 @@ function initChatbot(brand) {
       if (activeRecognition) {
         try {
           activeRecognition.abort();
-        } catch (err) {}
+        } catch (err) { }
         activeRecognition = null;
       }
       micBtnEl.classList.remove('listening');
@@ -2092,9 +2097,9 @@ function initChatbot(brand) {
       try {
         // Erst bei explizitem Klick neu instanziieren (Lazy)
         const recognition = new SpeechRec();
-        recognition.lang            = 'de-DE';
-        recognition.continuous      = false;
-        recognition.interimResults  = false;
+        recognition.lang = 'de-DE';
+        recognition.continuous = false;
+        recognition.interimResults = false;
 
         recognition.onstart = () => {
           micBtnEl.classList.add('listening');
@@ -2157,26 +2162,26 @@ async function boot() {
   // === Render-Pipeline (IMMUNSYSTEM: jeder Slot isoliert in safeRender) ===
   // CSS-Variablen und SEO zuerst – kein Slot-ID, da kein DOM-Slot
   safeRender('DesignTokens', () => applyDesignTokens(cfg.theme));
-  safeRender('Meta/SEO',     () => updateMeta(cfg.brand));
+  safeRender('Meta/SEO', () => updateMeta(cfg.brand));
 
   // Slot 1–6: jeder Fehler bleibt lokal, alle anderen Slots laufen weiter
-  safeRender('Navbar',       () => renderNavbar(cfg),      'slot-navbar');
-  safeRender('Hero',         () => renderHero(cfg),        'slot-hero');
-  safeRender('Metrics',      () => renderMetrics(cfg),     'slot-metrics');
-  safeRender('Features',     () => renderFeatures(cfg),    'slot-features');
-  safeRender('Showcase',     () => renderShowcase(cfg),    'slot-showcase');
-  safeRender('Pricing',      () => renderPricing(cfg),     'slot-pricing');
-  safeRender('Funnel',       () => renderFunnel(cfg),      'slot-funnel');
-  safeRender('Templates',    () => renderTemplates(cfg),   'slot-templates');
-  safeRender('FAQ',          () => renderFaq(cfg),         'slot-faq');
-  safeRender('Footer',       () => renderFooter(cfg),      'slot-footer');
+  safeRender('Navbar', () => renderNavbar(cfg), 'slot-navbar');
+  safeRender('Hero', () => renderHero(cfg), 'slot-hero');
+  safeRender('Metrics', () => renderMetrics(cfg), 'slot-metrics');
+  safeRender('Features', () => renderFeatures(cfg), 'slot-features');
+  safeRender('Showcase', () => renderShowcase(cfg), 'slot-showcase');
+  safeRender('Pricing', () => renderPricing(cfg), 'slot-pricing');
+  safeRender('Funnel', () => renderFunnel(cfg), 'slot-funnel');
+  safeRender('Templates', () => renderTemplates(cfg), 'slot-templates');
+  safeRender('FAQ', () => renderFaq(cfg), 'slot-faq');
+  safeRender('Footer', () => renderFooter(cfg), 'slot-footer');
 
   // Post-render: ebenfalls immunisiert
-  safeRender('InquiryModal',     () => initInquiryModal(cfg));
+  safeRender('InquiryModal', () => initInquiryModal(cfg));
   safeRender('ScrollAnimations', () => initScrollAnimations());
-  safeRender('SmoothScroll',     () => initSmoothScroll());
-  safeRender('CookieBanner',     () => initCookieBanner());
-  safeRender('Nova-Chatbot',     () => initChatbot(cfg.brand));
+  safeRender('SmoothScroll', () => initSmoothScroll());
+  safeRender('CookieBanner', () => initCookieBanner());
+  safeRender('Nova-Chatbot', () => initChatbot(cfg.brand));
 }
 
 // Start on DOM ready
