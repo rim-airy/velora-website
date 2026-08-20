@@ -2015,22 +2015,32 @@ function initChatbot(brand) {
     window.speechSynthesis.speak(utt);
   }
 
-  function send(text) {
-    const trimmed = (text || inputEl?.value || '').trim();
-    if (!trimmed) return;
-    const safeText = trimmed.slice(0, 300);
-    addMsg(safeText, 'user');
-    if (inputEl) inputEl.value = '';
+  async function send(text) {
+  const trimmed = (text || inputEl?.value || '').trim();
+  if (!trimmed) return;
+  const safeText = trimmed.slice(0, 300);
+  addMsg(safeText, 'user');
+  if (inputEl) inputEl.value = '';
 
-    showTyping();
-    setTimeout(() => {
-      removeTyping();
-      const reply = novaReply(safeText);
-      addMsg(reply, 'bot');
-      speak(reply); // Sprachausgabe nach Mikrofon-Eingabe
-    }, 800 + Math.random() * 400);
+  showTyping();
+  try {
+    const res = await fetch('http://localhost:5678/webhook/nova-chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: safeText })
+    });
+    const data = await res.json();
+    removeTyping();
+    const reply = data.output || data.reply || data.text || data.message || (typeof data === 'string' ? data : 'Nachricht empfangen.');
+    addMsg(reply, 'bot');
+    speak(reply);
+  } catch (err) {
+    removeTyping();
+    const fallback = novaReply(safeText);
+    addMsg(fallback, 'bot');
+    speak(fallback);
   }
-
+}
   // Quick-Reply Buttons
   document.querySelectorAll('.quick-btn').forEach(btn => {
     btn.addEventListener('click', () => {
