@@ -1563,18 +1563,34 @@ function initInquiryModal(cfg) {
       submitBtn.innerHTML = `<span>⏳ Konzept wird vorbereitet...</span>`;
     }
 
+   fetch('http://localhost:5678/webhook/nova-ingest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        leadId: 'LEAD-' + Date.now(),
+        timestamp: new Date().toLocaleString('de-DE'),
+        name: name,
+        email: email,
+        telefon: phone,
+        service: activeInquiryModalPkg || 'Allgemeine Anfrage',
+        status: 'Neu',
+        notizen: 'Website Modal Anfrage'
+      })
+    }).catch(err => console.error('Lead Ingest Error:', err));
+
     setTimeout(() => {
       form.style.display = 'none';
       if (successState) {
         successState.classList.remove('hidden');
         if (successMsg) {
-          successMsg.innerHTML = `Vielen Dank, <strong>${sanitize(name)}</strong>! Dein maßgeschneidertes Strategiekonzept für das <strong>${sanitize(activeInquiryModalPkg)}-Paket</strong> wird generiert. Wir melden uns in unter 15 Minuten via WhatsApp oder E-Mail bei dir.`;
+          successMsg.innerHTML = `Vielen Dank, <strong>${sanitize(name)}</strong>! Dein maßgeschneidertes Strategiekonzept wird vorbereitet.`;
         }
         if (waBtn) {
-          const waText = encodeURIComponent(`Hallo Velora-Team, ich habe eine Anfrage für das ${activeInquiryModalPkg}-Paket gestellt (Name: ${name}).`);
+          const waText = encodeURIComponent(`Hallo Velora-Team, ich habe eine Anfrage für das ${activeInquiryModalPkg}-Paket gestellt.`);
           waBtn.href = `https://wa.me/491701234567?text=${waText}`;
         }
       }
+    }, 400);
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `<span>Kostenloses Strategiekonzept anfordern →</span>`;
