@@ -1595,7 +1595,7 @@ function initInquiryModal(cfg) {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `<span>Kostenloses Strategiekonzept anfordern →</span>`;
       }
-    }, 600);
+
   });
 }
 
